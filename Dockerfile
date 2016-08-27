@@ -1,11 +1,4 @@
-FROM ubuntu:14.04
-
-RUN apt-get update
-
-# Install npm
-RUN apt-get install -y software-properties-common curl
-RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get install -y nodejs
+FROM mhart/alpine-node:6.4.0
 
 # Install tiddlywiki
 RUN npm install -g tiddlywiki
