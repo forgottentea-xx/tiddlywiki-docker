@@ -1,4 +1,7 @@
-FROM mhart/alpine-node:6.4.0
+FROM mhart/alpine-node:latest
+
+# bash, bruh
+RUN apk add --update bash
 
 # Install tiddlywiki
 RUN npm install -g tiddlywiki
